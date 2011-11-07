@@ -1,0 +1,471 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BF257670911C7C28384103C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384103B /* Cocoa.framework */; };
+		BF257670911C7C283841046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841045 /* InfoPlist.strings */; };
+		BF257670911C7C283841048 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841047 /* main.m */; };
+		BF257670911C7C28384104C /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384104B /* Credits.rtf */; };
+		BF257670911C7C28384104F /* SRAAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384104E /* SRAAppDelegate.m */; };
+		BF257670911C7C283841052 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841051 /* MainMenu.xib */; };
+		BF257670911C7C28384105D /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384105C /* SenTestingKit.framework */; };
+		BF257670911C7C28384105E /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384103B /* Cocoa.framework */; };
+		BF257670911C7C283841066 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841065 /* InfoPlist.strings */; };
+		BF257670911C7C283841069 /* ShadowrunAssistantTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841068 /* ShadowrunAssistantTests.m */; };
+		BF257670911C7C28384106F /* SRAProperty.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384106E /* SRAProperty.m */; };
+		BF257670911C7C283841072 /* SRACharacter.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841071 /* SRACharacter.m */; };
+		BF257670911C7C283841074 /* SRAPropertyType.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841073 /* SRAPropertyType.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BF257670911C7C28384105F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0BF257670911C7C28384102C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BF257670911C7C283841033;
+			remoteInfo = ShadowrunAssistant;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BF257670911C7C283841032 /* ShadowrunAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowrunAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF257670911C7C28384103B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		BF257670911C7C28384103E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		BF257670911C7C28384103F /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		BF257670911C7C283841040 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		BF257670911C7C283841043 /* ShadowrunAssistant-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ShadowrunAssistant-Info.plist"; sourceTree = "<group>"; };
+		BF257670911C7C283841044 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF257670911C7C283841047 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		BF257670911C7C283841049 /* ShadowrunAssistant-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ShadowrunAssistant-Prefix.pch"; sourceTree = "<group>"; };
+		BF257670911C7C28384104A /* en */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = en; path = en.lproj/Credits.rtf; sourceTree = "<group>"; };
+		BF257670911C7C28384104D /* SRAAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SRAAppDelegate.h; sourceTree = "<group>"; };
+		BF257670911C7C28384104E /* SRAAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SRAAppDelegate.m; sourceTree = "<group>"; };
+		BF257670911C7C283841050 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		BF257670911C7C283841053 /* ShadowrunAssistantTests.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ShadowrunAssistantTests.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BF257670911C7C28384105C /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
+		BF257670911C7C283841063 /* ShadowrunAssistantTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.info; path = "ShadowrunAssistantTests-Info.plist"; sourceTree = "<group>"; };
+		BF257670911C7C283841064 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		BF257670911C7C283841067 /* ShadowrunAssistantTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowrunAssistantTests.h; sourceTree = "<group>"; };
+		BF257670911C7C283841068 /* ShadowrunAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowrunAssistantTests.m; sourceTree = "<group>"; };
+		BF257670911C7C28384106A /* SRAPropertyDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRAPropertyDescription.h; path = ShadowrunAssistant/SRAPropertyDescription.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106B /* SRATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRATest.h; path = ShadowrunAssistant/SRATest.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106C /* SRAEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRAEngine.h; path = ShadowrunAssistant/SRAEngine.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106D /* SRACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRACharacter.h; path = ShadowrunAssistant/SRACharacter.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106E /* SRAProperty.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAProperty.m; sourceTree = "<group>"; };
+		BF257670911C7C283841070 /* SRAProperty.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAProperty.h; sourceTree = "<group>"; };
+		BF257670911C7C283841071 /* SRACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacter.m; sourceTree = "<group>"; };
+		BF257670911C7C283841073 /* SRAPropertyType.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAPropertyType.m; sourceTree = "<group>"; };
+		BF257670911C7C283841075 /* SRAPropertyType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAPropertyType.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BF257670911C7C283841038 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C28384103C /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF257670911C7C283841059 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C28384105D /* SenTestingKit.framework in Frameworks */,
+				BF257670911C7C28384105E /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BF257670911C7C28384102E = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C28384106D /* SRACharacter.h */,
+				BF257670911C7C28384106C /* SRAEngine.h */,
+				BF257670911C7C28384106B /* SRATest.h */,
+				BF257670911C7C28384106A /* SRAPropertyDescription.h */,
+				BF257670911C7C28384102F /* Products */,
+				BF257670911C7C28384103A /* Frameworks */,
+				BF257670911C7C283841041 /* ShadowrunAssistant */,
+				BF257670911C7C283841061 /* ShadowrunAssistantTests */,
+			);
+			sourceTree = "<group>";
+		};
+		BF257670911C7C28384102F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C283841032 /* ShadowrunAssistant.app */,
+				BF257670911C7C283841053 /* ShadowrunAssistantTests.octest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C28384103A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C28384105C /* SenTestingKit.framework */,
+				BF257670911C7C28384103B /* Cocoa.framework */,
+				BF257670911C7C28384103D /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C28384103D /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C283841040 /* Foundation.framework */,
+				BF257670911C7C28384103F /* CoreData.framework */,
+				BF257670911C7C28384103E /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841041 /* ShadowrunAssistant */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C283841075 /* SRAPropertyType.h */,
+				BF257670911C7C283841073 /* SRAPropertyType.m */,
+				BF257670911C7C283841071 /* SRACharacter.m */,
+				BF257670911C7C283841070 /* SRAProperty.h */,
+				BF257670911C7C28384106E /* SRAProperty.m */,
+				BF257670911C7C283841051 /* MainMenu.xib */,
+				BF257670911C7C28384104E /* SRAAppDelegate.m */,
+				BF257670911C7C28384104D /* SRAAppDelegate.h */,
+				BF257670911C7C283841042 /* Supporting Files */,
+			);
+			path = ShadowrunAssistant;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841042 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C28384104B /* Credits.rtf */,
+				BF257670911C7C283841049 /* ShadowrunAssistant-Prefix.pch */,
+				BF257670911C7C283841047 /* main.m */,
+				BF257670911C7C283841045 /* InfoPlist.strings */,
+				BF257670911C7C283841043 /* ShadowrunAssistant-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841061 /* ShadowrunAssistantTests */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C283841068 /* ShadowrunAssistantTests.m */,
+				BF257670911C7C283841067 /* ShadowrunAssistantTests.h */,
+				BF257670911C7C283841062 /* Supporting Files */,
+			);
+			path = ShadowrunAssistantTests;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841062 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				BF257670911C7C283841065 /* InfoPlist.strings */,
+				BF257670911C7C283841063 /* ShadowrunAssistantTests-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BF257670911C7C283841033 /* ShadowrunAssistant */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF257670911C7C283841034 /* Build configuration list for PBXNativeTarget "ShadowrunAssistant" */;
+			buildPhases = (
+				BF257670911C7C283841037 /* Sources */,
+				BF257670911C7C283841038 /* Frameworks */,
+				BF257670911C7C283841039 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ShadowrunAssistant;
+			productName = ShadowrunAssistant;
+			productReference = BF257670911C7C283841032 /* ShadowrunAssistant.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BF257670911C7C283841054 /* ShadowrunAssistantTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BF257670911C7C283841055 /* Build configuration list for PBXNativeTarget "ShadowrunAssistantTests" */;
+			buildPhases = (
+				BF257670911C7C283841058 /* Sources */,
+				BF257670911C7C283841059 /* Frameworks */,
+				BF257670911C7C28384105A /* Resources */,
+				BF257670911C7C28384105B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BF257670911C7C283841060 /* PBXTargetDependency */,
+			);
+			name = ShadowrunAssistantTests;
+			productName = ShadowrunAssistantTests;
+			productReference = BF257670911C7C283841053 /* ShadowrunAssistantTests.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		0BF257670911C7C28384102C /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = BF257670911C7C28384102D /* Build configuration list for PBXProject "ShadowrunAssistant" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = BF257670911C7C28384102E;
+			productRefGroup = BF257670911C7C28384102F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BF257670911C7C283841033 /* ShadowrunAssistant */,
+				BF257670911C7C283841054 /* ShadowrunAssistantTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BF257670911C7C283841039 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C283841046 /* InfoPlist.strings in Resources */,
+				BF257670911C7C28384104C /* Credits.rtf in Resources */,
+				BF257670911C7C283841052 /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF257670911C7C28384105A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C283841066 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BF257670911C7C28384105B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BF257670911C7C283841037 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C283841048 /* main.m in Sources */,
+				BF257670911C7C28384104F /* SRAAppDelegate.m in Sources */,
+				BF257670911C7C28384106F /* SRAProperty.m in Sources */,
+				BF257670911C7C283841072 /* SRACharacter.m in Sources */,
+				BF257670911C7C283841074 /* SRAPropertyType.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BF257670911C7C283841058 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF257670911C7C283841069 /* ShadowrunAssistantTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BF257670911C7C283841060 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BF257670911C7C283841033 /* ShadowrunAssistant */;
+			targetProxy = BF257670911C7C28384105F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BF257670911C7C283841045 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF257670911C7C283841044 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C28384104B /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF257670911C7C28384104A /* en */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841051 /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF257670911C7C283841050 /* en */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+		BF257670911C7C283841065 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BF257670911C7C283841064 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BF257670911C7C283841030 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		BF257670911C7C283841031 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.7;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		BF257670911C7C283841035 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShadowrunAssistant/ShadowrunAssistant-Prefix.pch";
+				INFOPLIST_FILE = "ShadowrunAssistant/ShadowrunAssistant-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		BF257670911C7C283841036 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShadowrunAssistant/ShadowrunAssistant-Prefix.pch";
+				INFOPLIST_FILE = "ShadowrunAssistant/ShadowrunAssistant-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		BF257670911C7C283841056 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShadowrunAssistant.app/Contents/MacOS/ShadowrunAssistant";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShadowrunAssistant/ShadowrunAssistant-Prefix.pch";
+				INFOPLIST_FILE = "ShadowrunAssistantTests/ShadowrunAssistantTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Release;
+		};
+		BF257670911C7C283841057 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/ShadowrunAssistant.app/Contents/MacOS/ShadowrunAssistant";
+				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "ShadowrunAssistant/ShadowrunAssistant-Prefix.pch";
+				INFOPLIST_FILE = "ShadowrunAssistantTests/ShadowrunAssistantTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BF257670911C7C28384102D /* Build configuration list for PBXProject "ShadowrunAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF257670911C7C283841030 /* Release */,
+				BF257670911C7C283841031 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BF257670911C7C283841034 /* Build configuration list for PBXNativeTarget "ShadowrunAssistant" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF257670911C7C283841035 /* Release */,
+				BF257670911C7C283841036 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BF257670911C7C283841055 /* Build configuration list for PBXNativeTarget "ShadowrunAssistantTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BF257670911C7C283841056 /* Release */,
+				BF257670911C7C283841057 /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 0BF257670911C7C28384102C /* Project object */;
+}
