@@ -2,6 +2,7 @@
 @class SRACharacter;
 @class SRAAttributeInfo;
 @class SRASkillInfo;
+@class SRATestContext;
 
 @interface SRATest : NSObject {
 }
@@ -10,22 +11,10 @@
 
 - (SRACharacteristicInfo *)secondaryCharacteristic;
 
-- (int)bonus;
-
-- (int)malus;
-
-- (int)threshold;
-
-- (void)setThreshold:(int)threshold;
-
-- (BOOL)edge;
-
-- (void)useEdge:(BOOL)useEdge;
-
 - (int)dicePoolForCharacter:(SRACharacter *)character;
 
-+ (id)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withBonus:(int)bonus withMalus:(int)malus;
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context;
 
-+ (SRATest *)testingAttributeOnly:(SRAAttributeInfo *)attribute withBonus:(int)bonus withMalus:(int)malus;
++ (SRATest *)testingAttributeOnly:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context;
 
 @end
