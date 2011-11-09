@@ -19,6 +19,12 @@
 static SRACharacteristicType *_attribute;
 static SRACharacteristicType *_skill;
 
+// override to prevent direct instantiation
+- (id)init {
+  [self doesNotRecognizeSelector:_cmd];
+  return nil;
+}
+
 + (void)initialize {
   static BOOL initialized = NO;
   if (!initialized) {
