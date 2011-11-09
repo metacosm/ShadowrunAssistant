@@ -7,7 +7,7 @@
 
 #import <Foundation/Foundation.h>
 
-@class SRAPropertyType;
+@class SRACharacteristicType;
 @class SRACharacteristicInfo;
 
 
@@ -22,7 +22,7 @@
 
 - (NSString *)name;
 
-+ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRAPropertyType *)type withValue:(int)value;
++ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value;
 
 @end
 
