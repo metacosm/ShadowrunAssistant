@@ -25,6 +25,7 @@
 		BF257670911C7C28384107C /* SRASkillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107B /* SRASkillInfo.m */; };
 		BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107E /* SRAAttributeInfo.m */; };
 		BF257670911C7C283841082 /* SRATestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841081 /* SRATestContext.m */; };
+		BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841084 /* SRACharacteristicInfo.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		BF257670911C7C283841080 /* SRAAttributeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAAttributeInfo.h; sourceTree = "<group>"; };
 		BF257670911C7C283841081 /* SRATestContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATestContext.m; sourceTree = "<group>"; };
 		BF257670911C7C283841083 /* SRATestContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATestContext.h; sourceTree = "<group>"; };
+		BF257670911C7C283841084 /* SRACharacteristicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacteristicInfo.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 		BF257670911C7C283841041 /* ShadowrunAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				BF257670911C7C283841084 /* SRACharacteristicInfo.m */,
 				BF257670911C7C283841083 /* SRATestContext.h */,
 				BF257670911C7C283841081 /* SRATestContext.m */,
 				BF257670911C7C283841080 /* SRAAttributeInfo.h */,
@@ -241,6 +244,9 @@
 /* Begin PBXProject section */
 		0BF257670911C7C28384102C /* Project object */ = {
 			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0420;
+			};
 			buildConfigurationList = BF257670911C7C28384102D /* Build configuration list for PBXProject "ShadowrunAssistant" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
@@ -311,6 +317,7 @@
 				BF257670911C7C28384107C /* SRASkillInfo.m in Sources */,
 				BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */,
 				BF257670911C7C283841082 /* SRATestContext.m in Sources */,
+				BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -484,6 +491,7 @@
 				BF257670911C7C283841036 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF257670911C7C283841055 /* Build configuration list for PBXNativeTarget "ShadowrunAssistantTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +500,7 @@
 				BF257670911C7C283841057 /* Debug */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
