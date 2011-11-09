@@ -1,12 +1,31 @@
-@class SRAPropertyDescription;
+@class SRACharacteristicInfo;
+@class SRACharacter;
+@class SRAAttributeInfo;
+@class SRASkillInfo;
 
 @interface SRATest : NSObject {
 }
 
-@property(readonly) SRAPropertyDescription *attribute;
-@property(readonly) SRAPropertyDescription *skill;
-@property(readonly) int bonus;
-@property(readonly) int malus;
+- (SRACharacteristicInfo *)primaryCharacteristic;
 
-+ (id)testingSkill:(SRAPropertyDescription *)skill withAttribute:(SRAPropertyDescription *)attribute withBonus:(int)bonus withMalus:(int)malus;
+- (SRACharacteristicInfo *)secondaryCharacteristic;
+
+- (int)bonus;
+
+- (int)malus;
+
+- (int)threshold;
+
+- (void)setThreshold:(int)threshold;
+
+- (BOOL)edge;
+
+- (void)useEdge:(BOOL)useEdge;
+
+- (int)dicePoolForCharacter:(SRACharacter *)character;
+
++ (id)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withBonus:(int)bonus withMalus:(int)malus;
+
++ (SRATest *)testingAttributeOnly:(SRAAttributeInfo *)attribute withBonus:(int)bonus withMalus:(int)malus;
+
 @end

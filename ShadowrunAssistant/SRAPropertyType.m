@@ -8,22 +8,33 @@
 #import "SRAPropertyType.h"
 
 
+static NSDictionary *knownTypes;
+
 @implementation SRAPropertyType {
-@private
-  NSString *name;
 }
 
 - (id)initWithName:(NSString *)aName {
   self = [super init];
   if (self) {
     name = [aName copy];
+    if (!knownTypes) {
+      knownTypes = [NSDictionary dictionaryWithObjectsAndKeys:
+          [[SRAPropertyType alloc] initWithName:ATTRIBUTE], ATTRIBUTE,
+          [[SRAPropertyType alloc] initWithName:SKILL], SKILL,
+          nil];
+    }
   }
 
   return self;
 }
 
+- (NSString *)name {
+  return name;
+}
 
-SRAPropertyType* const ATTRIBUTE = [[SRAPropertyType alloc] initWithName:@"attribute"];
-SRAPropertyType* const SKILL = [[SRAPropertyType alloc] initWithName:@"skill"];
++ (SRAPropertyType *)forName:(NSString *)name {
+  return [knownTypes objectForKey:name];
+}
+
 
 @end

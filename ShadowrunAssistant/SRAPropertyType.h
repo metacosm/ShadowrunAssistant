@@ -10,15 +10,15 @@
 @class SRAPropertyType;
 
 
-extern SRAPropertyType* const ATTRIBUTE;
-extern SRAPropertyType* const SKILL;
+extern NSString *const ATTRIBUTE = @"attribute";
+extern NSString *const SKILL = @"skill";
 
-@interface SRAPropertyType : NSObject
-{
+@interface SRAPropertyType : NSObject {
+  NSString *name;
 }
-@property(readonly) NSString* name;
 
-- (id)initWithName:(NSString *)aName;
+- (NSString *)name;
 
++ (SRAPropertyType *)forName:(NSString *)name;
 
 @end

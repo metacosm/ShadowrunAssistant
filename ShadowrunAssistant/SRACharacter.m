@@ -5,10 +5,9 @@
 //
 
 
-#import <net-snmp/varbind_api.h>
 #import "SRACharacter.h"
 #import "SRAPropertyType.h"
-#import "SRAProperty.h"
+#import "SRACharacteristic.h"
 
 @implementation SRACharacter {
 @private
@@ -26,7 +25,7 @@
 
 - (void)addProperty:(NSString *)name withLevel:(int)level andType:(SRAPropertyType *)type {
   if (ATTRIBUTE == type || SKILL == type) {
-    SRAProperty *property = [SRAProperty propertyNamed:name ofType:type withValue:level];
+    SRACharacteristic *property = [SRACharacteristic propertyNamed:name ofType:type withValue:level];
     NSMutableDictionary *props = ATTRIBUTE == type ? attributes : skills;
     [props setObject:property forKey:name];
   }
@@ -41,7 +40,7 @@
 - (int)attribute:(NSString *)name {
   id attribute = [attributes objectForKey:name];
   if (attribute != nil) {
-    return [attribute value];
+    return [attribute unmodifiedValue];
   }
   else {
     NSException *exception = [NSException exceptionWithName:@"InvalidAtttributeException"
