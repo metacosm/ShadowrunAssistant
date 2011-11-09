@@ -24,6 +24,7 @@
 		BF257670911C7C283841079 /* SRATestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841078 /* SRATestResult.m */; };
 		BF257670911C7C28384107C /* SRASkillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107B /* SRASkillInfo.m */; };
 		BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107E /* SRAAttributeInfo.m */; };
+		BF257670911C7C283841082 /* SRATestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841081 /* SRATestContext.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +73,8 @@
 		BF257670911C7C28384107D /* SRASkillInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRASkillInfo.h; path = ShadowrunAssistant/SRASkillInfo.h; sourceTree = "<group>"; };
 		BF257670911C7C28384107E /* SRAAttributeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAAttributeInfo.m; sourceTree = "<group>"; };
 		BF257670911C7C283841080 /* SRAAttributeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAAttributeInfo.h; sourceTree = "<group>"; };
+		BF257670911C7C283841081 /* SRATestContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATestContext.m; sourceTree = "<group>"; };
+		BF257670911C7C283841083 /* SRATestContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATestContext.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +146,8 @@
 		BF257670911C7C283841041 /* ShadowrunAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				BF257670911C7C283841083 /* SRATestContext.h */,
+				BF257670911C7C283841081 /* SRATestContext.m */,
 				BF257670911C7C283841080 /* SRAAttributeInfo.h */,
 				BF257670911C7C28384107E /* SRAAttributeInfo.m */,
 				BF257670911C7C28384107A /* SRATestResult.h */,
@@ -305,6 +310,7 @@
 				BF257670911C7C283841079 /* SRATestResult.m in Sources */,
 				BF257670911C7C28384107C /* SRASkillInfo.m in Sources */,
 				BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */,
+				BF257670911C7C283841082 /* SRATestContext.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
