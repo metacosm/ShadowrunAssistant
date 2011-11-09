@@ -6,8 +6,8 @@
 
 
 #import "SRACharacter.h"
-#import "SRAPropertyType.h"
 #import "SRACharacteristic.h"
+#import "SRACharacteristicInfo.h"
 
 @implementation SRACharacter {
 @private
@@ -15,63 +15,45 @@
   NSString *_nickname;
   int _currentKarma;
   int _totalKarma;
-  NSMutableDictionary *attributes;
-  NSMutableDictionary *skills;
+  NSMutableDictionary *characteristics;
 }
-@synthesize name = _name;
-@synthesize nickname = _nickname;
-@synthesize currentKarma = _currentKarma;
-@synthesize totalKarma = _totalKarma;
 
-- (void)addProperty:(NSString *)name withLevel:(int)level andType:(SRAPropertyType *)type {
-  if (ATTRIBUTE == type || SKILL == type) {
-    SRACharacteristic *property = [SRACharacteristic propertyNamed:name ofType:type withValue:level];
-    NSMutableDictionary *props = ATTRIBUTE == type ? attributes : skills;
-    [props setObject:property forKey:name];
+
+- (NSString *)name {
+  return _name;
+}
+
+- (NSString *)nickname {
+  return _nickname;
+}
+
+- (int)currentKarma {
+  return _currentKarma;
+}
+
+- (int)totalKarma {
+  return _totalKarma;
+}
+
+- (SRACharacteristicInfo *)characteristicInfo:(NSString *)name {
+  SRACharacteristic *characteristic = [self characteristic:name];
+  if (characteristic) {
+    return [characteristic info];
   }
   else {
-    NSException *exception = [NSException exceptionWithName:@"InvalidPropertyTypeException"
-                                                     reason:[NSString stringWithFormat:@"Invalid property type %@", [type name]]
-                                                   userInfo:nil];
-    @throw exception;
+    return nil;
   }
 }
 
-- (int)attribute:(NSString *)name {
-  id attribute = [attributes objectForKey:name];
-  if (attribute != nil) {
-    return [attribute unmodifiedValue];
-  }
-  else {
-    NSException *exception = [NSException exceptionWithName:@"InvalidAtttributeException"
-                                                     reason:[NSString stringWithFormat:@"Invalid attribute name %@", name]
-                                                   userInfo:nil];
-    @throw exception;
+- (SRACharacteristic *)characteristic:(NSString *)name {
+  return [characteristics objectForKey:name];
+}
+
+- (void)addCharacteristic:(SRACharacteristic *)characteristic {
+  if (characteristic) {
+    [characteristics setObject:characteristic forKey:[characteristic name]];
   }
 }
-
-- (int)unmodifiedSkill:(NSString *)name {
-  return 0;
-  //To change the template use AppCode | Preferences | File Templates.
-
-}
-
-- (int)modifiedSkill:(NSString *)name {
-  return 0;
-  //To change the template use AppCode | Preferences | File Templates.
-
-}
-
-- (void)addSkill:(NSString *)name withLevel:(int)level {
-  [self addProperty:name withLevel:level andType:SKILL];
-
-}
-
-
-- (void)addAttribute:(NSString *)name withLevel:(int)level {
-  [self addProperty:name withLevel:level andType:ATTRIBUTE];
-}
-
 
 - (id)initWithName:(NSString *)name andNickname:(NSString *)nickname {
   self = [super init];

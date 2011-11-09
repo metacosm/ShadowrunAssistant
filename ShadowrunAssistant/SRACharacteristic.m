@@ -7,10 +7,11 @@
 
 #import "SRACharacteristic.h"
 #import "SRAPropertyType.h"
+#import "SRACharacteristicInfo.h"
 
 
 @implementation SRACharacteristic {
-
+  SRACharacteristicInfo *_info;
 }
 
 - (int)unmodifiedValue {
@@ -24,10 +25,18 @@
 
 }
 
-+ (SRACharacteristic *)propertyNamed:(NSString *)name ofType:(SRAPropertyType *)type withValue:(int)value {
++ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRAPropertyType *)type withValue:(int)value {
   return nil;
   //To change the template use AppCode | Preferences | File Templates.
 
+}
+
+- (SRACharacteristicInfo *)info {
+  return _info;
+}
+
+- (NSString *)name {
+  return [_info name];
 }
 
 @end

@@ -1,22 +1,24 @@
+@class SRACharacteristicInfo;
+@class SRACharacteristic;
+
 @interface SRACharacter : NSObject {
 }
 
-@property(copy) NSString *name;
-@property(copy) NSString *nickname;
-@property int currentKarma;
-@property(readonly) int totalKarma;
+- (NSString *)name;
+
+- (NSString *)nickname;
+
+- (int)currentKarma;
+
+- (int)totalKarma;
 
 - (id)initWithName:(NSString *)name andNickname:(NSString *)nickname;
 
-- (int)attribute:(NSString *)name;
+- (SRACharacteristicInfo *)characteristicInfo:(NSString *)name;
 
-- (int)unmodifiedSkill:(NSString *)name;
+- (SRACharacteristic *)characteristic:(NSString *)name;
 
-- (int)modifiedSkill:(NSString *)name;
-
-- (void)addSkill:(NSString *)name withLevel:(int)level;
-
-- (id)initWithName:(NSString *)name andNickname: (NSString *) nick;
+- (void)addCharacteristic:(SRACharacteristic *)characteristic;
 
 + (SRACharacter *)characterNamed:(NSString *)name nicknamed:(NSString *)nick;
 

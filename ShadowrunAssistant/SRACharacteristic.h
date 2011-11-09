@@ -8,6 +8,7 @@
 #import <Foundation/Foundation.h>
 
 @class SRAPropertyType;
+@class SRACharacteristicInfo;
 
 
 @interface SRACharacteristic : NSObject {
@@ -17,6 +18,11 @@
 
 - (int)modifiedValue;
 
-+ (SRACharacteristic *)propertyNamed:(NSString *)name ofType:(SRAPropertyType *)type withValue:(int)value;
+- (SRACharacteristicInfo *)info;
+
+- (NSString *)name;
+
++ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRAPropertyType *)type withValue:(int)value;
+
 @end
 
