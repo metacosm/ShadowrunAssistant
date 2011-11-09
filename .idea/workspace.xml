@@ -4,9 +4,17 @@
     <bookmark url="file://$PROJECT_DIR$/ShadowrunAssistant/SRACharacteristicInfo.h" line="0" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b4b6079a-e159-4e80-8a49-504cf697f118" name="Default" comment="- Renamed SRAProperty to SRACharacteristic.&#10;- Renamed SRAPropertyDescription to SRACharacteristicInfo.&#10;- Added SRASkillInfo and SRAAttributeInfo as subclasses of SRACharacteristicInfo.&#10;- Started fleshing out SRATest implementation with internal subclasses, removed property usage for now, added threshold and edge support, added dicePoolForCharacter method.&#10;- Added SRATestResult to hold result of a test instead of simply returning number of successes.&#10;- Still fiddling with SRAPropertyType. Would really like type-safe constants…">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/ShadowrunAssistant.xcodeproj/project.pbxproj" afterPath="$PROJECT_DIR$/ShadowrunAssistant.xcodeproj/project.pbxproj" />
+    <list default="true" id="b4b6079a-e159-4e80-8a49-504cf697f118" name="Default" comment="- Added .gitignore.&#10;">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/.name" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/ShadowrunAssistant.iml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/codeStyleSettings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/scopes/scope_settings.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/xcode.xml" afterPath="" />
     </list>
     <ignored path="ShadowrunAssistant.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -47,10 +55,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SRATest.h" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="SRATest.h" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATest.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.14007781">
+            <state line="12" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -74,10 +82,28 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="SRACharacter.h" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRACharacter.h">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="7" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="151" selection-start="38" selection-end="38" vertical-scroll-proportion="0.023346303">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SRATest.m" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATest.m">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
+            <state line="48" column="156" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -101,15 +127,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SRACharacteristic.m" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRACharacteristic.m">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="FindManager">
@@ -125,7 +142,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/ShadowrunAssistant/SRATestResult.h" />
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRAEngine.h" />
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRAPropertyType.h" />
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRAPropertyType.m" />
@@ -141,6 +157,7 @@
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRATestContext.h" />
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRATestContext.m" />
         <option value="$PROJECT_DIR$/ShadowrunAssistant/SRATest.m" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -378,7 +395,7 @@
     <option name="INCLUDE_TEXT_INTO_PATCH" value="false" />
     <option name="INCLUDE_TEXT_INTO_SHELF" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="- Extracted SRATestContext to gather bonus, malus, threshold and edge information for tests. Note that this information will be set per character at some point and may evolve over time." />
+    <option name="LAST_COMMIT_MESSAGE" value="- Added .gitignore.&#10;" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -393,25 +410,14 @@
     <option name="FILE_HISTORY_SPLITTER_PROPORTION" value="0.6" />
     <MESSAGE value="- Renamed SRAProperty to SRACharacteristic.&#10;- Renamed SRAPropertyDescription to SRACharacteristicInfo.&#10;- Added SRASkillInfo and SRAAttributeInfo as subclasses of SRACharacteristicInfo.&#10;- Started fleshing out SRATest implementation with internal subclasses, removed property usage for now, added threshold and edge support, added dicePoolForCharacter method.&#10;- Added SRATestResult to hold result of a test instead of simply returning number of successes.&#10;- Still fiddling with SRAPropertyType. Would really like type-safe constants…" />
     <MESSAGE value="- Extracted SRATestContext to gather bonus, malus, threshold and edge information for tests. Note that this information will be set per character at some point and may evolve over time." />
+    <MESSAGE value="- Project update." />
+    <MESSAGE value="- Renamed SRATestWithDifferentAttribute to SRATestWithAttribute to be more generic.&#10;- Added second attribute to testingAttributeOnly.&#10;- Made init methods more generic.&#10;" />
+    <MESSAGE value="- Added .gitignore.&#10;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/ShadowrunAssistantTests/ShadowrunAssistantTests.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRAPropertyType.m">
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="0" selection-start="115" selection-end="115" vertical-scroll-proportion="0.0">
@@ -482,13 +488,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATest.m">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="160" selection-end="160" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATestContext.h">
       <provider selected="true" editor-type-id="text-editor">
         <state line="23" column="0" selection-start="323" selection-end="323" vertical-scroll-proportion="0.0">
@@ -505,7 +504,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATest.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.14007781">
+        <state line="12" column="0" selection-start="259" selection-end="259" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRACharacter.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="7" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ShadowrunAssistant/SRATest.m">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="48" column="156" selection-start="1285" selection-end="1285" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="151" selection-start="38" selection-end="38" vertical-scroll-proportion="0.023346303">
           <folding />
         </state>
       </provider>
