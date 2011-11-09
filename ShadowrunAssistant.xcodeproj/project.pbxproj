@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E512EC6146B26E9001A9403 /* SRAConstantsSR4.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E512EC5146B26E9001A9403 /* SRAConstantsSR4.m */; };
 		BF257670911C7C28384103C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384103B /* Cocoa.framework */; };
 		BF257670911C7C283841046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841045 /* InfoPlist.strings */; };
 		BF257670911C7C283841048 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841047 /* main.m */; };
@@ -39,6 +40,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E512EC4146B26E9001A9403 /* SRAConstantsSR4.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAConstantsSR4.h; sourceTree = "<group>"; };
+		9E512EC5146B26E9001A9403 /* SRAConstantsSR4.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAConstantsSR4.m; sourceTree = "<group>"; };
 		BF257670911C7C283841032 /* ShadowrunAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowrunAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF257670911C7C28384103B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BF257670911C7C28384103E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -159,6 +162,8 @@
 				BF257670911C7C283841075 /* SRACharacteristicType.h */,
 				BF257670911C7C283841073 /* SRACharacteristicType.m */,
 				BF257670911C7C283841071 /* SRACharacter.m */,
+				9E512EC4146B26E9001A9403 /* SRAConstantsSR4.h */,
+				9E512EC5146B26E9001A9403 /* SRAConstantsSR4.m */,
 				BF257670911C7C283841070 /* SRACharacteristic.h */,
 				BF257670911C7C28384106E /* SRACharacteristic.m */,
 				BF257670911C7C283841051 /* MainMenu.xib */,
@@ -318,6 +323,7 @@
 				BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */,
 				BF257670911C7C283841082 /* SRATestContext.m in Sources */,
 				BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */,
+				9E512EC6146B26E9001A9403 /* SRAConstantsSR4.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
