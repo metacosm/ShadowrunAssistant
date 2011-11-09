@@ -14,22 +14,22 @@
 
 
 @interface SRATest ()
-- (id)initWithContext:(SRATestContext *)context withSkill:(SRASkillInfo *)skill;
+- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic;
 @end
 
-@interface SRATestWithDifferentAttribute : SRATest {
-  SRAAttributeInfo *_attribute;
+@interface SRATestWithAttribute : SRATest {
+  SRACharacteristicInfo *_attribute;
 }
 
-- (id)initWithContext:(SRATestContext *)context withSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute;
+- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary;
 
 @end
 
-@implementation SRATestWithDifferentAttribute
-- (id)initWithContext:(SRATestContext *)context withSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute {
-  self = [super initWithContext:context withSkill:skill];
+@implementation SRATestWithAttribute
+- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary {
+  self = [super initWithContext:context withPrimaryCharacteristic:primary];
   if (self) {
-    _attribute = attribute;
+    _attribute = secondary;
   }
 
   return self;
@@ -41,12 +41,14 @@
 
 @implementation SRATest {
   SRACharacteristicInfo *_primary;
+  SRATestContext *_context;
 }
 
-- (id)initWithContext:(SRATestContext *)context withSkill:(SRASkillInfo *)skill {
+- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic {
   self = [super init];
   if (self) {
-    _primary = skill;
+    _context = context;
+    _primary = characteristic;
   }
 
   return self;
@@ -72,17 +74,27 @@
 
 }
 
-+ (SRATest *)testingAttributeOnly:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context {
-  return nil;
++ (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRATestContext *)context {
+  SRATest *test;
+
+  if (!secondAttribute) {
+    secondAttribute = firstAttribute;
+  }
+
+  test = [[SRATestWithAttribute alloc] initWithContext:context withPrimaryCharacteristic:firstAttribute withSecondaryCharacteristic:secondAttribute];
+
+  return test;
 }
 
 + (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context {
   SRATest *test;
+
+  // if we don't specify an attribute use the skill's linked attribute
   if (attribute && ![attribute isEqual:[skill linkedAttribute]]) {
-    test = [[SRATestWithDifferentAttribute alloc] initWithContext:context withSkill:skill withAttribute:attribute];
+    test = [[SRATestWithAttribute alloc] initWithContext:context withPrimaryCharacteristic:skill withSecondaryCharacteristic:attribute];
   }
   else {
-    test = [[self alloc] initWithContext:nil withSkill:skill];
+    test = [[self alloc] initWithContext:nil withPrimaryCharacteristic:skill];
 
   }
   return test;
