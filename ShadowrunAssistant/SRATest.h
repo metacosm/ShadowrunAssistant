@@ -11,7 +11,7 @@
 
 - (SRACharacteristicInfo *)secondaryCharacteristic;
 
-- (int)dicePoolForCharacter:(SRACharacter *)character;
+- (int)dicePoolFor:(SRACharacter *)character;
 
 + (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context;
 

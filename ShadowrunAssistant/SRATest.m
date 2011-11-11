@@ -80,7 +80,7 @@
   return [characteristic modifiedValue];
 }
 
-- (int)dicePoolForCharacter:(SRACharacter *)character {
+- (int)dicePoolFor:(SRACharacter *)character {
   // initial dice pool
   int dicePool = [self modifiedCharacteristic:[self primaryCharacteristic] forCharacter:character]
       + [self modifiedCharacteristic:[self secondaryCharacteristic] forCharacter:character]
