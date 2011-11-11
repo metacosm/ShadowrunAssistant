@@ -11,6 +11,9 @@
 #import "SRASkillInfo.h"
 #import "SRAAttributeInfo.h"
 #import "SRATestContext.h"
+#import "SRACharacteristic.h"
+#import "SRACharacteristicType.h"
+#import "SRAConstants.h"
 
 
 @interface SRATest ()
@@ -34,9 +37,6 @@
 
   return self;
 }
-
-
-@end
 
 
 @implementation SRATest {
@@ -69,8 +69,30 @@
 }
 
 
+- (int)modifiedCharacteristic:(SRACharacteristicInfo *)characteristicInfo forCharacter:(SRACharacter *)character {
+  SRACharacteristic *characteristic = [character characteristic:[characteristicInfo name]];
+
+  // check if we are defaulting
+  if (!characteristic && [[SRACharacteristicType skill] isEqual:[characteristicInfo type]]) {
+    SRASkillInfo *skillInfo = (SRASkillInfo *) characteristicInfo;
+    return [[character characteristic:[[skillInfo linkedAttribute] name]] modifiedValue];
+  }
+  return [characteristic modifiedValue];
+}
+
 - (int)dicePoolForCharacter:(SRACharacter *)character {
-  return 0;
+  // initial dice pool
+  int dicePool = [self modifiedCharacteristic:[self primaryCharacteristic] forCharacter:character]
+      + [self modifiedCharacteristic:[self secondaryCharacteristic] forCharacter:character]
+      + [_context bonusFor:character]
+      - [_context malusFor:character];
+
+  // check if character is using edge
+  if ([_context edgeFor:character]) {
+    dicePool += [[character characteristic:ATTR_EDGE] modifiedValue];
+  }
+
+  return dicePool;
 
 }
 
