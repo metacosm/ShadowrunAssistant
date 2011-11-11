@@ -6,6 +6,7 @@
 
 
 #import "SRATestContext.h"
+#import "SRACharacter.h"
 
 
 @implementation SRATestContext {
@@ -13,27 +14,27 @@
   BOOL _edge;
 }
 
-- (int)bonus {
+- (int)bonusFor:(SRACharacter *)character {
   return 0;
 }
 
-- (int)malus {
+- (int)malusFor:(SRACharacter *)character {
   return 0;
 }
 
-- (int)threshold {
+- (int)thresholdFor:(SRACharacter *)character {
   return _threshold;
 }
 
-- (void)setThreshold:(int)threshold {
+- (void)setThreshold:(int)threshold for:(SRACharacter *)character {
   _threshold = threshold;
 }
 
-- (BOOL)edge {
+- (BOOL)edgeFor:(SRACharacter *)character {
   return _edge;
 }
 
-- (void)useEdge:(BOOL)useEdge {
+- (void)useEdge:(BOOL)useEdge for:(SRACharacter *)character {
   _edge = useEdge;
 }
 

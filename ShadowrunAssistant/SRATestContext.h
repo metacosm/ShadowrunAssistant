@@ -7,19 +7,21 @@
 
 #import <Foundation/Foundation.h>
 
+@class SRACharacter;
+
 
 @interface SRATestContext : NSObject
 
-- (int)bonus;
+- (int)bonusFor:(SRACharacter *)character;
 
-- (int)malus;
+- (int)malusFor:(SRACharacter *)character;
 
-- (int)threshold;
+- (int)thresholdFor:(SRACharacter *)character;
 
-- (void)setThreshold:(int)threshold;
+- (void)setThreshold:(int)threshold for:(SRACharacter *)character;
 
-- (BOOL)edge;
+- (BOOL)edgeFor:(SRACharacter *)character;
 
-- (void)useEdge:(BOOL)useEdge;
+- (void)useEdge:(BOOL)useEdge for:(SRACharacter *)character;
 
 @end
