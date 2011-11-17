@@ -7,9 +7,9 @@
 @interface SRATest : NSObject {
 }
 
-- (SRACharacteristicInfo *)primaryCharacteristic;
+@property(readonly) SRACharacteristicInfo *primaryCharacteristic;
 
-- (SRACharacteristicInfo *)secondaryCharacteristic;
+@property(readonly) SRACharacteristicInfo *secondaryCharacteristic;
 
 - (int)dicePoolFor:(SRACharacter *)character;
 

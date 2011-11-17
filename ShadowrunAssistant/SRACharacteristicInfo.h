@@ -2,11 +2,9 @@
 
 @interface SRACharacteristicInfo : NSObject
 
-- (NSString *)name;
-
-- (NSString *)description;
-
-- (SRACharacteristicType *)type;
+@property(readonly, copy) NSString *name;
+@property(readonly, copy) NSString *description;
+@property(readonly, weak) SRACharacteristicType *type;
 
 - (NSSet *)qualities;
 

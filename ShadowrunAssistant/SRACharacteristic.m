@@ -11,32 +11,37 @@
 
 
 @implementation SRACharacteristic {
-  SRACharacteristicInfo *_info;
 }
 
-- (int)unmodifiedValue {
-  return 0;
-
-}
+@synthesize unmodifiedValue = _unmodifiedValue;
+@synthesize info = _info;
 
 - (int)modifiedValue {
-  return 0;
-  //To change the template use AppCode | Preferences | File Templates.
+  return _unmodifiedValue /* + modifiers */;
 
 }
 
 + (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value {
+  SRACharacteristicInfo *info = [SRACharacteristicInfo characteristicInfoNamed:name typed:type];
+  if (info) {
+    return [[SRACharacteristic alloc] initWith:info withValue:value];
+  }
   return nil;
-  //To change the template use AppCode | Preferences | File Templates.
 
-}
-
-- (SRACharacteristicInfo *)info {
-  return _info;
 }
 
 - (NSString *)name {
   return [_info name];
+
 }
 
+- (id)initWith:(SRACharacteristicInfo *)info withValue:(int)value {
+  self = [super init];
+  if (self) {
+    _unmodifiedValue = value;
+    _info = info;
+  }
+  return self;
+
+}
 @end

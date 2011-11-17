@@ -11,29 +11,13 @@
 
 @implementation SRACharacter {
 @private
-  NSString *_name;
-  NSString *_nickname;
-  int _currentKarma;
-  int _totalKarma;
   NSMutableDictionary *characteristics;
 }
 
-
-- (NSString *)name {
-  return _name;
-}
-
-- (NSString *)nickname {
-  return _nickname;
-}
-
-- (int)currentKarma {
-  return _currentKarma;
-}
-
-- (int)totalKarma {
-  return _totalKarma;
-}
+@synthesize name = _name;
+@synthesize nickname = _nickname;
+@synthesize currentKarma = _currentKarma;
+@synthesize totalKarma = _totalKarma;
 
 - (SRACharacteristicInfo *)characteristicInfo:(NSString *)name {
   SRACharacteristic *characteristic = [self characteristic:name];

@@ -10,5 +10,7 @@
 
 
 @interface SRASkillInfo : SRACharacteristicInfo
-- (SRACharacteristicInfo *)linkedAttribute;
+
+@property(readonly, weak) SRACharacteristicInfo *linkedAttribute;
+
 @end

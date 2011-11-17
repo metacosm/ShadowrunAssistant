@@ -12,7 +12,7 @@
 
 @interface SRACharacteristicType : NSObject
 
-- (NSString *)name;
+@property(readonly, copy) NSString *name;
 
 + (SRACharacteristicType *)attribute;
 

@@ -10,24 +10,11 @@
 
 
 @implementation SRACharacteristicInfo {
-  NSString *_name;
-  NSString *_desc;
-  SRACharacteristicType *_type;
-}
-- (NSString *)name {
-  return _name;
-
 }
 
-- (NSString *)description {
-  return _desc;
-
-}
-
-- (SRACharacteristicType *)type {
-  return _type;
-
-}
+@synthesize name = _name;
+@synthesize description = _desc;
+@synthesize type = _type;
 
 + (SRACharacteristicInfo *)characteristicInfoNamed:(NSString *)name typed:(SRACharacteristicType *)type {
   SRACharacteristicInfo *info = [[self alloc] init];

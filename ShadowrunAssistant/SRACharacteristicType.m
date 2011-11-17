@@ -13,8 +13,9 @@
 
 
 @implementation SRACharacteristicType {
-  NSString *_name;
 }
+
+@synthesize name = _name;
 
 static SRACharacteristicType *_attribute;
 static SRACharacteristicType *_skill;
@@ -23,6 +24,7 @@ static SRACharacteristicType *_skill;
 - (id)init {
   [self doesNotRecognizeSelector:_cmd];
   return nil;
+
 }
 
 + (void)initialize {
@@ -32,6 +34,7 @@ static SRACharacteristicType *_skill;
     _attribute = [[SRACharacteristicType alloc] initWithName:@"attribute"];
     _skill = [[SRACharacteristicType alloc] initWithName:@"skill"];
   }
+
 }
 
 
@@ -42,18 +45,17 @@ static SRACharacteristicType *_skill;
   }
 
   return self;
-}
 
-- (NSString *)name {
-  return _name;
 }
 
 + (SRACharacteristicType *)attribute {
   return _attribute;
+
 }
 
 + (SRACharacteristicType *)skill {
   return _skill;
+
 }
 
 

@@ -36,7 +36,14 @@
   }
 
   return self;
+
 }
+
+- (SRACharacteristicInfo *)secondaryCharacteristic {
+  return _attribute;
+
+}
+
 @end
 
 

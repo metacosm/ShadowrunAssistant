@@ -12,9 +12,6 @@
 
 }
 
-- (SRACharacteristicInfo *)linkedAttribute {
-  return NULL;
-  //To change the template use AppCode | Preferences | File Templates.
+@synthesize linkedAttribute = _linkedAttribute;
 
-}
 @end

@@ -14,15 +14,13 @@
 @interface SRACharacteristic : NSObject {
 }
 
-- (int)unmodifiedValue;
-
-- (int)modifiedValue;
-
-- (SRACharacteristicInfo *)info;
-
-- (NSString *)name;
+@property(readonly) int unmodifiedValue;
+@property(readonly) int modifiedValue;
+@property(readonly, weak) SRACharacteristicInfo *info;
+@property(readonly) NSString *name;
 
 + (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value;
 
+- (id)initWith:(SRACharacteristicInfo *)info withValue:(int)value;
 @end
 
