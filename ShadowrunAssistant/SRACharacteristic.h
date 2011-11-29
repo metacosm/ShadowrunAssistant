@@ -15,9 +15,9 @@
 }
 
 @property(readonly) int unmodifiedValue;
-@property(readonly) int modifiedValue;
 @property(readonly, weak) SRACharacteristicInfo *info;
 @property(readonly) NSString *name;
+@property(readonly, weak) SRACharacteristicType *type;
 
 + (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value;
 

@@ -16,10 +16,6 @@
 @synthesize unmodifiedValue = _unmodifiedValue;
 @synthesize info = _info;
 
-- (int)modifiedValue {
-  return _unmodifiedValue /* + modifiers */;
-
-}
 
 + (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value {
   SRACharacteristicInfo *info = [SRACharacteristicInfo characteristicInfoNamed:name typed:type];
@@ -32,6 +28,12 @@
 
 - (NSString *)name {
   return [_info name];
+
+}
+
+
+- (SRACharacteristicType *)type {
+  return [_info type];
 
 }
 

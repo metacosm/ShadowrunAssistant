@@ -11,8 +11,6 @@
 #import "SRASkillInfo.h"
 #import "SRAAttributeInfo.h"
 #import "SRATestContext.h"
-#import "SRACharacteristic.h"
-#import "SRACharacteristicType.h"
 #import "SRAConstants.h"
 
 
@@ -78,14 +76,7 @@
 
 
 - (int)modifiedCharacteristic:(SRACharacteristicInfo *)characteristicInfo forCharacter:(SRACharacter *)character {
-  SRACharacteristic *characteristic = [character characteristic:[characteristicInfo name]];
-
-  // check if we are defaulting
-  if (!characteristic && [[SRACharacteristicType skill] isEqual:[characteristicInfo type]]) {
-    SRASkillInfo *skillInfo = (SRASkillInfo *) characteristicInfo;
-    return [[character characteristic:[[skillInfo linkedAttribute] name]] modifiedValue];
-  }
-  return [characteristic modifiedValue];
+  return [character modifiedValueForCharacteristic:[characteristicInfo name]];
 }
 
 - (int)dicePoolFor:(SRACharacter *)character {
@@ -97,7 +88,7 @@
 
   // check if character is using edge
   if ([_context edgeFor:character]) {
-    dicePool += [[character characteristic:ATTR_EDGE] modifiedValue];
+    dicePool += [character modifiedValueForCharacteristic:ATTR_EDGE];
   }
 
   return dicePool;

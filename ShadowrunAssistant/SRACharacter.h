@@ -13,10 +13,9 @@
 
 - (SRACharacteristicInfo *)characteristicInfo:(NSString *)name;
 
-- (SRACharacteristic *)characteristic:(NSString *)name;
-
 - (void)addCharacteristic:(SRACharacteristic *)characteristic;
 
 + (SRACharacter *)characterNamed:(NSString *)name nicknamed:(NSString *)nick;
 
+- (int)modifiedValueForCharacteristic:(NSString const *)string;
 @end
