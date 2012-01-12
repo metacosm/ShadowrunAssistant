@@ -130,4 +130,8 @@
   return test;
 }
 
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRATestContext *)context {
+ return [self testingSkill:skill withAttribute:nil withContext:context];
+
+}
 @end

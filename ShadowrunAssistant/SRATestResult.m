@@ -6,10 +6,23 @@
 
 
 #import "SRATestResult.h"
-
+#import "SRATestContext.h"
 
 @implementation SRATestResult {
-
+  NSArray *_diceResults;
 }
+
+- (id) initWithDiceResults: (NSArray *)diceResults {
+  self = [super init];
+  if(self)
+  {
+    _diceResults = [NSArray arrayWithArray:diceResults];
+  }
+  
+  return self;
+  
+}
+
+@synthesize context = _context;
 
 @end

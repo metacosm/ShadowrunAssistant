@@ -17,4 +17,5 @@
 
 + (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRATestContext *)context;
 
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRATestContext *)context;
 @end
