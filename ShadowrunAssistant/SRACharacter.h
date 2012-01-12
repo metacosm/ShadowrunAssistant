@@ -13,7 +13,7 @@
 
 - (SRACharacteristicInfo *)characteristicInfo:(NSString *)name;
 
-- (SRACharacteristic *)characteristic:(NSString *)sname;
+- (SRACharacteristic *)characteristic:(NSString *)name;
 
 - (void)addCharacteristic:(SRACharacteristic *)characteristic;
 
