@@ -57,7 +57,7 @@
   SRAEngine *engine = [SRAEngine engineNamed:@"SR4"];
   SRATestResult *simple = [engine testCharacter:[SRACharacterRegistry characterNamed:@"Foo"]
                                                                 forTest:[SRATest testingSkill:[SRASkillRegistry skillNamed:@"simple skill"]
-                                                                                  withContext:[engine context]];
+                                                                                  withContext:[engine context]]];
   STAssertNotNil(simple, @"A test should result in a test result");
   STAssertNotNil([simple context], @"A new context should have been created");
 }

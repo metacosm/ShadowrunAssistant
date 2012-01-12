@@ -13,6 +13,8 @@
 
 @implementation SRAEngine
 
+@synthesize context = _context;
+
 - (int) throwDie {
   return 1 + random()%6;
 }

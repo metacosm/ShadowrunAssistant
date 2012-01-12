@@ -7,6 +7,8 @@
 
 }
 
+@property(readonly, strong) SRATestContext *context;
+
 - (int) throwDie;
 
 - (SRATestResult *)testCharacter:(SRACharacter *)character forTest:(SRATest *)test;
