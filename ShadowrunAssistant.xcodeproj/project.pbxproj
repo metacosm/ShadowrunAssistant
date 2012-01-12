@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9E512EC6146B26E9001A9403 /* SRAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E512EC5146B26E9001A9403 /* SRAConstants.m */; };
+		9E8BFFB314B9FCF800DA1968 /* SRAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BFFB214B9FCF800DA1968 /* SRAEngine.m */; };
 		BF257670911C7C28384103C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384103B /* Cocoa.framework */; };
 		BF257670911C7C283841046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841045 /* InfoPlist.strings */; };
 		BF257670911C7C283841048 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841047 /* main.m */; };
@@ -27,6 +28,8 @@
 		BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107E /* SRAAttributeInfo.m */; };
 		BF257670911C7C283841082 /* SRATestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841081 /* SRATestContext.m */; };
 		BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841084 /* SRACharacteristicInfo.m */; };
+		BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841086 /* SRACharacterRegistry.m */; };
+		BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841089 /* SRASkillRegistry.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +45,7 @@
 /* Begin PBXFileReference section */
 		9E512EC4146B26E9001A9403 /* SRAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAConstants.h; sourceTree = "<group>"; };
 		9E512EC5146B26E9001A9403 /* SRAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAConstants.m; sourceTree = "<group>"; };
+		9E8BFFB214B9FCF800DA1968 /* SRAEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAEngine.m; sourceTree = "<group>"; };
 		BF257670911C7C283841032 /* ShadowrunAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowrunAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF257670911C7C28384103B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		BF257670911C7C28384103E /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
@@ -61,10 +65,10 @@
 		BF257670911C7C283841064 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		BF257670911C7C283841067 /* ShadowrunAssistantTests.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ShadowrunAssistantTests.h; sourceTree = "<group>"; };
 		BF257670911C7C283841068 /* ShadowrunAssistantTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ShadowrunAssistantTests.m; sourceTree = "<group>"; };
-		BF257670911C7C28384106A /* SRACharacteristicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRACharacteristicInfo.h; path = ShadowrunAssistant/SRACharacteristicInfo.h; sourceTree = "<group>"; };
-		BF257670911C7C28384106B /* SRATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRATest.h; path = ShadowrunAssistant/SRATest.h; sourceTree = "<group>"; };
-		BF257670911C7C28384106C /* SRAEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRAEngine.h; path = ShadowrunAssistant/SRAEngine.h; sourceTree = "<group>"; };
-		BF257670911C7C28384106D /* SRACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRACharacter.h; path = ShadowrunAssistant/SRACharacter.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106A /* SRACharacteristicInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacteristicInfo.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106B /* SRATest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATest.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106C /* SRAEngine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAEngine.h; sourceTree = "<group>"; };
+		BF257670911C7C28384106D /* SRACharacter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacter.h; sourceTree = "<group>"; };
 		BF257670911C7C28384106E /* SRACharacteristic.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacteristic.m; sourceTree = "<group>"; };
 		BF257670911C7C283841070 /* SRACharacteristic.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacteristic.h; sourceTree = "<group>"; };
 		BF257670911C7C283841071 /* SRACharacter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacter.m; sourceTree = "<group>"; };
@@ -73,13 +77,17 @@
 		BF257670911C7C283841076 /* SRATest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATest.m; sourceTree = "<group>"; };
 		BF257670911C7C283841078 /* SRATestResult.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATestResult.m; sourceTree = "<group>"; };
 		BF257670911C7C28384107A /* SRATestResult.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATestResult.h; sourceTree = "<group>"; };
-		BF257670911C7C28384107B /* SRASkillInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SRASkillInfo.m; path = ShadowrunAssistant/SRASkillInfo.m; sourceTree = "<group>"; };
-		BF257670911C7C28384107D /* SRASkillInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SRASkillInfo.h; path = ShadowrunAssistant/SRASkillInfo.h; sourceTree = "<group>"; };
+		BF257670911C7C28384107B /* SRASkillInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRASkillInfo.m; sourceTree = "<group>"; };
+		BF257670911C7C28384107D /* SRASkillInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRASkillInfo.h; sourceTree = "<group>"; };
 		BF257670911C7C28384107E /* SRAAttributeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAAttributeInfo.m; sourceTree = "<group>"; };
 		BF257670911C7C283841080 /* SRAAttributeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAAttributeInfo.h; sourceTree = "<group>"; };
 		BF257670911C7C283841081 /* SRATestContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATestContext.m; sourceTree = "<group>"; };
 		BF257670911C7C283841083 /* SRATestContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATestContext.h; sourceTree = "<group>"; };
 		BF257670911C7C283841084 /* SRACharacteristicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacteristicInfo.m; sourceTree = "<group>"; };
+		BF257670911C7C283841086 /* SRACharacterRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacterRegistry.m; sourceTree = "<group>"; };
+		BF257670911C7C283841088 /* SRACharacterRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacterRegistry.h; sourceTree = "<group>"; };
+		BF257670911C7C283841089 /* SRASkillRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRASkillRegistry.m; sourceTree = "<group>"; };
+		BF257670911C7C28384108B /* SRASkillRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRASkillRegistry.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,12 +114,6 @@
 		BF257670911C7C28384102E = {
 			isa = PBXGroup;
 			children = (
-				BF257670911C7C28384107D /* SRASkillInfo.h */,
-				BF257670911C7C28384107B /* SRASkillInfo.m */,
-				BF257670911C7C28384106D /* SRACharacter.h */,
-				BF257670911C7C28384106C /* SRAEngine.h */,
-				BF257670911C7C28384106B /* SRATest.h */,
-				BF257670911C7C28384106A /* SRACharacteristicInfo.h */,
 				BF257670911C7C28384102F /* Products */,
 				BF257670911C7C28384103A /* Frameworks */,
 				BF257670911C7C283841041 /* ShadowrunAssistant */,
@@ -151,6 +153,17 @@
 		BF257670911C7C283841041 /* ShadowrunAssistant */ = {
 			isa = PBXGroup;
 			children = (
+				BF257670911C7C28384107D /* SRASkillInfo.h */,
+				BF257670911C7C28384107B /* SRASkillInfo.m */,
+				BF257670911C7C28384106D /* SRACharacter.h */,
+				BF257670911C7C28384106C /* SRAEngine.h */,
+				9E8BFFB214B9FCF800DA1968 /* SRAEngine.m */,
+				BF257670911C7C28384106B /* SRATest.h */,
+				BF257670911C7C28384106A /* SRACharacteristicInfo.h */,
+				BF257670911C7C28384108B /* SRASkillRegistry.h */,
+				BF257670911C7C283841089 /* SRASkillRegistry.m */,
+				BF257670911C7C283841088 /* SRACharacterRegistry.h */,
+				BF257670911C7C283841086 /* SRACharacterRegistry.m */,
 				BF257670911C7C283841084 /* SRACharacteristicInfo.m */,
 				BF257670911C7C283841083 /* SRATestContext.h */,
 				BF257670911C7C283841081 /* SRATestContext.m */,
@@ -324,6 +337,9 @@
 				BF257670911C7C283841082 /* SRATestContext.m in Sources */,
 				BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */,
 				9E512EC6146B26E9001A9403 /* SRAConstants.m in Sources */,
+				BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */,
+				BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */,
+				9E8BFFB314B9FCF800DA1968 /* SRAEngine.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
