@@ -6,11 +6,11 @@
 
 
 #import <Foundation/Foundation.h>
-@class SRATestContext;
+@class SRAContext;
 
 @interface SRATestResult : NSObject
 
-@property(readonly, weak) SRATestContext *context;
+@property(readonly, weak) SRAContext *context;
 
 - (id) initWithDiceResults: (NSArray *)diceResults;
 

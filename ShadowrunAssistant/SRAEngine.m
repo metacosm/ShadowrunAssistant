@@ -10,10 +10,38 @@
 #import "SRATest.h"
 #import "SRACharacter.h"
 #import "SRATestResult.h"
+#import "SRAContext.h"
 
-@implementation SRAEngine
+NSString const *SR4 = @"SR4";
+NSString const *DEFAULT_ENGINE_NAME = @"SR4";
+
+@implementation SRAEngine {
+
+}
 
 @synthesize context = _context;
+@synthesize name = _name;
+
+
+- (id)initWith:(NSString *)name {
+  self = [super init];
+  if (self) {
+    _name = name ? name : DEFAULT_ENGINE_NAME;
+    _context = [[SRAContext alloc] init];
+  }
+
+  return self;
+}
+
+- (BOOL)isEqual:(id)object {
+  if ([object isKindOfClass:[SRAEngine class]])
+  {
+    return [_name isEqual:[object name]];
+  }
+
+  return NO;
+}
+
 
 - (int) throwDie {
   return 1 + random()%6;
@@ -42,8 +70,12 @@
 + (SRAEngine *) engineNamed: (NSString *)engineName {
   NSDate *now = [[NSDate alloc] init];
   srandom([now timeIntervalSince1970]);
-  return [[SRAEngine alloc] init];
+  return [[SRAEngine alloc] initWith:engineName];
 }
 
 
++ (SRAEngine *)defaultEngine {
+ return [self engineNamed:DEFAULT_ENGINE_NAME];
+
+}
 @end

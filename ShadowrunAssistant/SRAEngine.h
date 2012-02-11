@@ -1,13 +1,17 @@
 @class SRACharacter;
 @class SRATest;
 @class SRATestResult;
-@class SRATestContext;
+@class SRAContext;
+
+extern NSString const *DEFAULT_ENGINE_NAME;
+extern NSString const *SR4;
 
 @interface SRAEngine : NSObject {
 
 }
 
-@property(readonly, strong) SRATestContext *context;
+@property(readonly, strong) SRAContext *context;
+@property(readonly, copy) NSString *name;
 
 - (int) throwDie;
 
@@ -17,4 +21,5 @@
 
 + (SRAEngine *) engineNamed: (NSString *)engineName;
 
++ (SRAEngine *)defaultEngine;
 @end

@@ -32,18 +32,18 @@
 - (void)testDiceThrowing {
   SRAEngine *engine = [SRAEngine engineNamed:@"SR4"];
   NSMutableDictionary *results = [NSMutableDictionary dictionaryWithObjectsAndKeys:
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:1], 
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:2],
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:3],
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:4],
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:5],
-                                  [NSNumber numberWithInt:0], [NSNumber numberWithInt:6],
-                                  nil];
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:1],
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:2],
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:3],
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:4],
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:5],
+      [NSNumber numberWithInt:0], [NSNumber numberWithInt:6],
+      nil];
   for (int i = 0; i < 6000; i++) {
     int result = [engine throwDie];
     NSNumber *key = [NSNumber numberWithInt:result];
-    NSNumber *count = [results objectForKey: key];
-    [results setObject:[NSNumber numberWithInt:[count intValue] + 1] forKey: key];    
+    NSNumber *count = [results objectForKey:key];
+    [results setObject:[NSNumber numberWithInt:[count intValue] + 1] forKey:key];
   }
 
   for (NSNumber *key in results) {
@@ -53,13 +53,29 @@
   }
 }
 
+- (void)testDefaultEngine {
+  SRAEngine *defaultEngine = [SRAEngine defaultEngine];
+  STAssertNotNil(defaultEngine, @"There should always be a default engine");
+  STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:DEFAULT_ENGINE_NAME],
+      @"Default engine should be the same as the one retrieved from the default name");
+  STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:nil],
+      @"Passing nil to engineNamed: should return the default engine");
+  STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:SR4],
+      @"Default engine should currently be the SR4 engine");
+}
+
+- (void)testContextInitialState {
+  SRAEngine *engine = [SRAEngine defaultEngine];
+}
+
 - (void)testSimpleTest {
-  SRAEngine *engine = [SRAEngine engineNamed:@"SR4"];
+  SRAEngine *engine = [SRAEngine defaultEngine];
+  STAssertNotNil([engine context], @"An engine should always provide a context");
+
   SRATestResult *simple = [engine testCharacter:[SRACharacterRegistry characterNamed:@"Foo"]
-                                                                forTest:[SRATest testingSkill:[SRASkillRegistry skillNamed:@"simple skill"]
-                                                                                  withContext:[engine context]]];
+                                        forTest:[SRATest testingSkill:[SRASkillRegistry skillNamed:@"simple skill"]
+                                                          withContext:[engine context]]];
   STAssertNotNil(simple, @"A test should result in a test result");
-  STAssertNotNil([simple context], @"A new context should have been created");
 }
 
 @end

@@ -2,7 +2,7 @@
 @class SRACharacter;
 @class SRAAttributeInfo;
 @class SRASkillInfo;
-@class SRATestContext;
+@class SRAContext;
 
 @interface SRATest : NSObject {
 }
@@ -13,9 +13,9 @@
 
 - (int)dicePoolFor:(SRACharacter *)character;
 
-+ (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context;
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRAContext *)context;
 
-+ (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRATestContext *)context;
++ (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRAContext *)context;
 
-+ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRATestContext *)context;
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRAContext *)context;
 @end

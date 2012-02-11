@@ -10,7 +10,7 @@
 @class SRACharacter;
 
 
-@interface SRATestContext : NSObject
+@interface SRAContext : NSObject
 
 - (int)bonusFor:(SRACharacter *)character;
 

@@ -26,7 +26,7 @@
 		BF257670911C7C283841079 /* SRATestResult.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841078 /* SRATestResult.m */; };
 		BF257670911C7C28384107C /* SRASkillInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107B /* SRASkillInfo.m */; };
 		BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384107E /* SRAAttributeInfo.m */; };
-		BF257670911C7C283841082 /* SRATestContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841081 /* SRATestContext.m */; };
+		BF257670911C7C283841082 /* SRAContext.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841081 /* SRAContext.m */; };
 		BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841084 /* SRACharacteristicInfo.m */; };
 		BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841086 /* SRACharacterRegistry.m */; };
 		BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841089 /* SRASkillRegistry.m */; };
@@ -81,8 +81,8 @@
 		BF257670911C7C28384107D /* SRASkillInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRASkillInfo.h; sourceTree = "<group>"; };
 		BF257670911C7C28384107E /* SRAAttributeInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAAttributeInfo.m; sourceTree = "<group>"; };
 		BF257670911C7C283841080 /* SRAAttributeInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAAttributeInfo.h; sourceTree = "<group>"; };
-		BF257670911C7C283841081 /* SRATestContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRATestContext.m; sourceTree = "<group>"; };
-		BF257670911C7C283841083 /* SRATestContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRATestContext.h; sourceTree = "<group>"; };
+		BF257670911C7C283841081 /* SRAContext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAContext.m; sourceTree = "<group>"; };
+		BF257670911C7C283841083 /* SRAContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAContext.h; sourceTree = "<group>"; };
 		BF257670911C7C283841084 /* SRACharacteristicInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacteristicInfo.m; sourceTree = "<group>"; };
 		BF257670911C7C283841086 /* SRACharacterRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRACharacterRegistry.m; sourceTree = "<group>"; };
 		BF257670911C7C283841088 /* SRACharacterRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacterRegistry.h; sourceTree = "<group>"; };
@@ -165,8 +165,8 @@
 				BF257670911C7C283841088 /* SRACharacterRegistry.h */,
 				BF257670911C7C283841086 /* SRACharacterRegistry.m */,
 				BF257670911C7C283841084 /* SRACharacteristicInfo.m */,
-				BF257670911C7C283841083 /* SRATestContext.h */,
-				BF257670911C7C283841081 /* SRATestContext.m */,
+				BF257670911C7C283841083 /* SRAContext.h */,
+				BF257670911C7C283841081 /* SRAContext.m */,
 				BF257670911C7C283841080 /* SRAAttributeInfo.h */,
 				BF257670911C7C28384107E /* SRAAttributeInfo.m */,
 				BF257670911C7C28384107A /* SRATestResult.h */,
@@ -334,7 +334,7 @@
 				BF257670911C7C283841079 /* SRATestResult.m in Sources */,
 				BF257670911C7C28384107C /* SRASkillInfo.m in Sources */,
 				BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */,
-				BF257670911C7C283841082 /* SRATestContext.m in Sources */,
+				BF257670911C7C283841082 /* SRAContext.m in Sources */,
 				BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */,
 				9E512EC6146B26E9001A9403 /* SRAConstants.m in Sources */,
 				BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */,

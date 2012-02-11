@@ -6,7 +6,7 @@
 
 
 #import "SRATestResult.h"
-#import "SRATestContext.h"
+#import "SRAContext.h"
 
 @implementation SRATestResult {
   NSArray *_diceResults;

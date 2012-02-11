@@ -5,11 +5,11 @@
 //
 
 
-#import "SRATestContext.h"
+#import "SRAContext.h"
 #import "SRACharacter.h"
 
 
-@implementation SRATestContext {
+@implementation SRAContext {
   int _threshold;
   BOOL _edge;
 }

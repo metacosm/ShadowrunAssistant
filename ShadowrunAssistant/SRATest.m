@@ -10,24 +10,24 @@
 #import "SRACharacteristicInfo.h"
 #import "SRASkillInfo.h"
 #import "SRAAttributeInfo.h"
-#import "SRATestContext.h"
+#import "SRAContext.h"
 #import "SRAConstants.h"
 
 
 @interface SRATest ()
-- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic;
+- (id)initWithContext:(SRAContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic;
 @end
 
 @interface SRATestWithAttribute : SRATest {
   SRACharacteristicInfo *_attribute;
 }
 
-- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary;
+- (id)initWithContext:(SRAContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary;
 
 @end
 
 @implementation SRATestWithAttribute
-- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary {
+- (id)initWithContext:(SRAContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)primary withSecondaryCharacteristic:(SRACharacteristicInfo *)secondary {
   self = [super initWithContext:context withPrimaryCharacteristic:primary];
   if (self) {
     _attribute = secondary;
@@ -47,10 +47,10 @@
 
 @implementation SRATest {
   SRACharacteristicInfo *_primary;
-  SRATestContext *_context;
+  SRAContext *_context;
 }
 
-- (id)initWithContext:(SRATestContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic {
+- (id)initWithContext:(SRAContext *)context withPrimaryCharacteristic:(SRACharacteristicInfo *)characteristic {
   self = [super init];
   if (self) {
     _context = context;
@@ -95,7 +95,7 @@
 
 }
 
-+ (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRATestContext *)context {
++ (SRATest *)testingAttributeOnlyWith:(SRAAttributeInfo *)firstAttribute secondAttribute:(SRAAttributeInfo *)secondAttribute withContext:(SRAContext *)context {
   SRATest *test;
 
   if (!secondAttribute) {
@@ -107,7 +107,7 @@
   return test;
 }
 
-+ (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRATestContext *)context {
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withAttribute:(SRAAttributeInfo *)attribute withContext:(SRAContext *)context {
   SRATest *test;
 
   // if we don't specify an attribute use the skill's linked attribute
@@ -121,7 +121,7 @@
   return test;
 }
 
-+ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRATestContext *)context {
++ (SRATest *)testingSkill:(SRASkillInfo *)skill withContext:(SRAContext *)context {
  return [self testingSkill:skill withAttribute:nil withContext:context];
 
 }
