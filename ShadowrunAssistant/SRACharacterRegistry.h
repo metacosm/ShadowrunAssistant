@@ -11,5 +11,5 @@
 
 
 @interface SRACharacterRegistry : NSObject
-+ (SRACharacter *)characterNamed:(NSString *)string;
++ (SRACharacter *)characterNamed:(NSString const *)name;
 @end

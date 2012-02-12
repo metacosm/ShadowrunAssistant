@@ -11,6 +11,8 @@
 #import "SRACharacteristicType.h"
 #import "SRASkillInfo.h"
 
+NSString const* DEFAULT_CHARACTER_NAME = @"Unnamed";
+
 @interface SRACharacter ()
 - (SRACharacteristic *)characteristic:(NSString const *)name;
 
@@ -21,8 +23,8 @@
   NSMutableDictionary *characteristics;
 }
 
+@synthesize realName = _realName;
 @synthesize name = _name;
-@synthesize nickname = _nickname;
 @synthesize currentKarma = _currentKarma;
 @synthesize totalKarma = _totalKarma;
 
@@ -46,11 +48,15 @@
   }
 }
 
-- (id)initWithName:(NSString *)name andNickname:(NSString *)nickname {
+- (id)init {
+  return [self initWithName:DEFAULT_CHARACTER_NAME];
+}
+
+- (id)initWithName:(NSString const *)name {
   self = [super init];
   if (self) {
-    _name = name;
-    _nickname = nickname;
+    _name = [NSString stringWithString:name];
+    _realName = _name;
   }
 
   return self;
@@ -68,10 +74,5 @@
 
 }
 
-+ (SRACharacter *)characterNamed:(NSString *)name nicknamed:(NSString *)nick {
-
-  return [[self alloc] initWithName:name andNickname:nick];
-
-}
 
 @end

@@ -8,13 +8,12 @@
 #import "SRACharacterRegistry.h"
 #import "SRACharacter.h"
 
-
 @implementation SRACharacterRegistry {
 
 }
 
-+ (SRACharacter *)characterNamed:(NSString *)string {
- return nil;
++ (SRACharacter *)characterNamed:(NSString const *)name {
+ return [[SRACharacter alloc] initWithName:name];
 
 }
 @end

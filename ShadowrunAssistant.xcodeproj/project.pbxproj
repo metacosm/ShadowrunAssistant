@@ -31,6 +31,8 @@
 		BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841086 /* SRACharacterRegistry.m */; };
 		BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841089 /* SRASkillRegistry.m */; };
 		BF257670911C7C28384108D /* EngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384108C /* EngineTests.m */; };
+		BF257670911C7C283841090 /* ContextTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384108F /* ContextTests.m */; };
+		BF257670911C7C283841093 /* CharacterTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841092 /* CharacterTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -91,6 +93,10 @@
 		BF257670911C7C28384108B /* SRASkillRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRASkillRegistry.h; sourceTree = "<group>"; };
 		BF257670911C7C28384108C /* EngineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineTests.m; sourceTree = "<group>"; };
 		BF257670911C7C28384108E /* EngineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineTests.h; sourceTree = "<group>"; };
+		BF257670911C7C28384108F /* ContextTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ContextTests.m; sourceTree = "<group>"; };
+		BF257670911C7C283841091 /* ContextTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ContextTests.h; sourceTree = "<group>"; };
+		BF257670911C7C283841092 /* CharacterTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CharacterTests.m; sourceTree = "<group>"; };
+		BF257670911C7C283841094 /* CharacterTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CharacterTests.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -205,6 +211,10 @@
 		BF257670911C7C283841061 /* ShadowrunAssistantTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF257670911C7C283841094 /* CharacterTests.h */,
+				BF257670911C7C283841092 /* CharacterTests.m */,
+				BF257670911C7C283841091 /* ContextTests.h */,
+				BF257670911C7C28384108F /* ContextTests.m */,
 				BF257670911C7C28384108E /* EngineTests.h */,
 				BF257670911C7C28384108C /* EngineTests.m */,
 				BF257670911C7C283841068 /* ShadowrunAssistantTests.m */,
@@ -354,6 +364,8 @@
 			files = (
 				BF257670911C7C283841069 /* ShadowrunAssistantTests.m in Sources */,
 				BF257670911C7C28384108D /* EngineTests.m in Sources */,
+				BF257670911C7C283841090 /* ContextTests.m in Sources */,
+				BF257670911C7C283841093 /* CharacterTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
