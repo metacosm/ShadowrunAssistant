@@ -30,6 +30,7 @@
 		BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841084 /* SRACharacteristicInfo.m */; };
 		BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841086 /* SRACharacterRegistry.m */; };
 		BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841089 /* SRASkillRegistry.m */; };
+		BF257670911C7C28384108D /* EngineTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384108C /* EngineTests.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +89,8 @@
 		BF257670911C7C283841088 /* SRACharacterRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRACharacterRegistry.h; sourceTree = "<group>"; };
 		BF257670911C7C283841089 /* SRASkillRegistry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRASkillRegistry.m; sourceTree = "<group>"; };
 		BF257670911C7C28384108B /* SRASkillRegistry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRASkillRegistry.h; sourceTree = "<group>"; };
+		BF257670911C7C28384108C /* EngineTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EngineTests.m; sourceTree = "<group>"; };
+		BF257670911C7C28384108E /* EngineTests.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EngineTests.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 		BF257670911C7C283841061 /* ShadowrunAssistantTests */ = {
 			isa = PBXGroup;
 			children = (
+				BF257670911C7C28384108E /* EngineTests.h */,
+				BF257670911C7C28384108C /* EngineTests.m */,
 				BF257670911C7C283841068 /* ShadowrunAssistantTests.m */,
 				BF257670911C7C283841067 /* ShadowrunAssistantTests.h */,
 				BF257670911C7C283841062 /* Supporting Files */,
@@ -348,6 +353,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF257670911C7C283841069 /* ShadowrunAssistantTests.m in Sources */,
+				BF257670911C7C28384108D /* EngineTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
