@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9E512EC6146B26E9001A9403 /* SRAConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E512EC5146B26E9001A9403 /* SRAConstants.m */; };
 		9E8BFFB314B9FCF800DA1968 /* SRAEngine.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E8BFFB214B9FCF800DA1968 /* SRAEngine.m */; };
 		BF257670911C7C28384103C /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF257670911C7C28384103B /* Cocoa.framework */; };
 		BF257670911C7C283841046 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = BF257670911C7C283841045 /* InfoPlist.strings */; };
@@ -46,8 +45,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		9E512EC4146B26E9001A9403 /* SRAConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SRAConstants.h; sourceTree = "<group>"; };
-		9E512EC5146B26E9001A9403 /* SRAConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAConstants.m; sourceTree = "<group>"; };
 		9E8BFFB214B9FCF800DA1968 /* SRAEngine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SRAEngine.m; sourceTree = "<group>"; };
 		BF257670911C7C283841032 /* ShadowrunAssistant.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ShadowrunAssistant.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF257670911C7C28384103B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
@@ -184,8 +181,6 @@
 				BF257670911C7C283841075 /* SRACharacteristicType.h */,
 				BF257670911C7C283841073 /* SRACharacteristicType.m */,
 				BF257670911C7C283841071 /* SRACharacter.m */,
-				9E512EC4146B26E9001A9403 /* SRAConstants.h */,
-				9E512EC5146B26E9001A9403 /* SRAConstants.m */,
 				BF257670911C7C283841070 /* SRACharacteristic.h */,
 				BF257670911C7C28384106E /* SRACharacteristic.m */,
 				BF257670911C7C283841051 /* MainMenu.xib */,
@@ -351,7 +346,6 @@
 				BF257670911C7C28384107F /* SRAAttributeInfo.m in Sources */,
 				BF257670911C7C283841082 /* SRAContext.m in Sources */,
 				BF257670911C7C283841085 /* SRACharacteristicInfo.m in Sources */,
-				9E512EC6146B26E9001A9403 /* SRAConstants.m in Sources */,
 				BF257670911C7C283841087 /* SRACharacterRegistry.m in Sources */,
 				BF257670911C7C28384108A /* SRASkillRegistry.m in Sources */,
 				9E8BFFB314B9FCF800DA1968 /* SRAEngine.m in Sources */,

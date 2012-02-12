@@ -12,6 +12,16 @@
 #import "SRASkillInfo.h"
 
 NSString const* DEFAULT_CHARACTER_NAME = @"Unnamed";
+NSString const *ATTR_AGILITY = @"agility";
+NSString const *ATTR_BODY = @"body";
+NSString const *ATTR_REACTION = @"reaction";
+NSString const *ATTR_STRENGTH = @"strength";
+NSString const *ATTR_CHARISMA = @"charisma";
+NSString const *ATTR_INTUITION = @"intuition";
+NSString const *ATTR_LOGIC = @"logic";
+NSString const *ATTR_WILLPOWER = @"willpower";
+NSString const *ATTR_EDGE = @"edge";
+
 
 @interface SRACharacter ()
 - (SRACharacteristic *)characteristic:(NSString const *)name;

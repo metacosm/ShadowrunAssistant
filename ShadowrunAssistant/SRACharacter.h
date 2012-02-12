@@ -2,6 +2,16 @@
 @class SRACharacteristic;
 
 extern NSString const* DEFAULT_CHARACTER_NAME;
+extern NSString const *ATTR_AGILITY;
+extern NSString const *ATTR_BODY;
+extern NSString const *ATTR_REACTION;
+extern NSString const *ATTR_STRENGTH;
+extern NSString const *ATTR_CHARISMA;
+extern NSString const *ATTR_INTUITION;
+extern NSString const *ATTR_LOGIC;
+extern NSString const *ATTR_WILLPOWER;
+extern NSString const *ATTR_EDGE;
+
 
 @interface SRACharacter : NSObject {
 }
