@@ -37,11 +37,18 @@
   }
 }
 
+- (void) testInitialState {
+  SRAEngine *engine = [SRAEngine engineNamed:@"foo"];
+  STAssertEqualObjects(@"foo", engine.name, @"Retrieving an engine from a given name should return an engine with that name");
+  STAssertNotNil(engine.context, @"An engine should always provide a context");
+}
+
 - (void)testDefaultEngine {
   SRAEngine *defaultEngine = [SRAEngine defaultEngine];
   STAssertNotNil(defaultEngine, @"There should always be a default engine");
-  STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:DEFAULT_ENGINE_NAME], @"Default engine should be the same as the one retrieved from the default name");
   STAssertEqualObjects(DEFAULT_ENGINE_NAME, defaultEngine.name, @"Default engine's name should be DEFAULT_ENGINE_NAME's value");
+
+  STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:DEFAULT_ENGINE_NAME], @"Default engine should be the same as the one retrieved from the default name");
   STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:nil], @"Passing nil to engineNamed: should return the default engine");
   STAssertEqualObjects(defaultEngine, [SRAEngine engineNamed:SR4], @"Default engine should currently be the SR4 engine");
 }

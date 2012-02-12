@@ -31,7 +31,6 @@
 
 - (void)testSimpleTest {
   SRAEngine *engine = [SRAEngine defaultEngine];
-  STAssertNotNil([engine context], @"An engine should always provide a context");
 
   SRATestResult *simple = [engine testCharacter:[SRACharacterRegistry characterNamed:@"Foo"]
                                         forTest:[SRATest testingSkill:[SRASkillRegistry skillNamed:@"simple skill"]

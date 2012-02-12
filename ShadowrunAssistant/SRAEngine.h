@@ -19,7 +19,7 @@ extern NSString const *SR4;
 
 - (SRATestResult *)testCharacter:(SRACharacter *)character forTest:(SRATest *)test withEdge:(BOOL)useEdge;
 
-+ (SRAEngine *) engineNamed: (NSString *)engineName;
++ (SRAEngine *) engineNamed: (NSString const *)engineName;
 
 + (SRAEngine *)defaultEngine;
 @end
