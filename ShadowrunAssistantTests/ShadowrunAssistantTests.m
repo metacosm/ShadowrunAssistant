@@ -8,12 +8,10 @@
 
 #import "ShadowrunAssistantTests.h"
 #import "SRATest.h"
-#import "SRASkillInfo.h"
 #import "SRATestResult.h"
 #import "SRAEngine.h"
-#import "SRACharacter.h"
 #import "SRACharacterRegistry.h"
-#import "SRASkillRegistry.h"
+#import "SRACharacteristicInfoRegistry.h"
 
 @implementation ShadowrunAssistantTests
 
@@ -32,8 +30,8 @@
 - (void)testSimpleTest {
   SRAEngine *engine = [SRAEngine defaultEngine];
 
-  SRATestResult *simple = [engine testCharacter:[SRACharacterRegistry characterNamed:@"Foo"]
-                                        forTest:[SRATest testingSkill:[SRASkillRegistry skillNamed:@"simple skill"]
+  SRATestResult *simple = [engine testCharacter:[[engine characterRegistry] characterNamed:@"Foo"]
+                                        forTest:[SRATest testingSkill:[[engine characteristicRegistry] skillNamed:@"simple skill"]
                                                           withContext:[engine context]]];
   STAssertNotNil(simple, @"A test should result in a test result");
 }

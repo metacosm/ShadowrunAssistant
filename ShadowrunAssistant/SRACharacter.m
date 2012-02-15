@@ -10,18 +10,8 @@
 #import "SRACharacteristicInfo.h"
 #import "SRACharacteristicType.h"
 #import "SRASkillInfo.h"
-
-NSString const* DEFAULT_CHARACTER_NAME = @"Unnamed";
-NSString const *ATTR_AGILITY = @"agility";
-NSString const *ATTR_BODY = @"body";
-NSString const *ATTR_REACTION = @"reaction";
-NSString const *ATTR_STRENGTH = @"strength";
-NSString const *ATTR_CHARISMA = @"charisma";
-NSString const *ATTR_INTUITION = @"intuition";
-NSString const *ATTR_LOGIC = @"logic";
-NSString const *ATTR_WILLPOWER = @"willpower";
-NSString const *ATTR_EDGE = @"edge";
-
+#import "SRAEngine.h"
+#import "SRACharacteristicInfoRegistry.h"
 
 @interface SRACharacter ()
 - (SRACharacteristic *)characteristic:(NSString const *)name;
@@ -31,42 +21,48 @@ NSString const *ATTR_EDGE = @"edge";
 @implementation SRACharacter {
 @private
   NSMutableDictionary *characteristics;
+  SRAEngine *__weak _engine;
 }
 
 @synthesize realName = _realName;
 @synthesize name = _name;
 @synthesize currentKarma = _currentKarma;
 @synthesize totalKarma = _totalKarma;
+@synthesize engine = _engine;
+
 
 - (SRACharacteristicInfo *)characteristicInfo:(NSString *)name {
   SRACharacteristic *characteristic = [self characteristic:name];
-  if (characteristic) {
-    return [characteristic info];
-  }
-  else {
-    return nil;
-  }
+  return [characteristic info];
 }
 
 - (SRACharacteristic *)characteristic:(NSString const *)name {
   return [characteristics objectForKey:name];
 }
 
-- (void)addCharacteristic:(SRACharacteristic *)characteristic {
-  if (characteristic) {
-    [characteristics setObject:characteristic forKey:[characteristic name]];
+- (void)setCharacteristic:(NSString const *)name withValue:(int)value {
+  if (name) {
+    SRACharacteristicInfo *const info = [[_engine characteristicRegistry] characteristicInfoNamed:name];
+    SRACharacteristic *const characteristic = [SRACharacteristic characteristic:info withValue:value];
+    [characteristics setObject:characteristic forKey:name];
   }
 }
 
 - (id)init {
-  return [self initWithName:DEFAULT_CHARACTER_NAME];
+  return [self initWithName:DEFAULT_CHARACTER_NAME engine:NULL];
 }
 
-- (id)initWithName:(NSString const *)name {
+- (id)initWithName:(NSString const *)name engine:(SRAEngine *)engine {
   self = [super init];
   if (self) {
     _name = [NSString stringWithString:name];
     _realName = _name;
+    _engine = engine;
+    NSArray *const supportedAttributes = engine.supportedAttributes;
+    characteristics = [NSMutableDictionary dictionaryWithCapacity:supportedAttributes.count];
+    for(NSString *attributeName in supportedAttributes) {
+      [self setCharacteristic:attributeName withValue:0];
+    }
   }
 
   return self;

@@ -7,6 +7,8 @@
 
 #import "SRACharacteristicInfo.h"
 #import "SRACharacteristicType.h"
+#import "SRAAttributeInfo.h"
+#import "SRASkillInfo.h"
 
 
 @implementation SRACharacteristicInfo {
@@ -16,8 +18,17 @@
 @synthesize description = _desc;
 @synthesize type = _type;
 
-+ (SRACharacteristicInfo *)characteristicInfoNamed:(NSString *)name typed:(SRACharacteristicType *)type {
-  SRACharacteristicInfo *info = [[self alloc] init];
++ (SRACharacteristicInfo *)characteristicInfoNamed:(NSString const*)name typed:(SRACharacteristicType *)type {
+  SRACharacteristicInfo *info;
+  if([SRACharacteristicType attribute] == type)
+  {
+    info = [[SRAAttributeInfo alloc] init];
+  }
+  else
+  {
+    info = [[SRASkillInfo alloc] init];
+  }
+  info = [[self alloc] init];
   info->_name = [name copy];
   info->_type = type;
   return info;

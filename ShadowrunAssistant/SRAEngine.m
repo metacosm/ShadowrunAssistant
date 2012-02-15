@@ -11,9 +11,8 @@
 #import "SRACharacter.h"
 #import "SRATestResult.h"
 #import "SRAContext.h"
-
-NSString const *SR4 = @"SR4";
-NSString const *DEFAULT_ENGINE_NAME = @"SR4";
+#import "SRACharacterRegistry.h"
+#import "SRACharacteristicInfoRegistry.h"
 
 @implementation SRAEngine {
 
@@ -21,21 +20,30 @@ NSString const *DEFAULT_ENGINE_NAME = @"SR4";
 
 @synthesize context = _context;
 @synthesize name = _name;
+@synthesize characterRegistry = _characterRegistry;
+@synthesize characteristicRegistry = _characteristicRegistry;
+@synthesize supportedAttributes = _supportedAttributes;
 
 
-- (id)initWith:(NSString *)name {
+- (id)initWith:(NSString const *)name {
   self = [super init];
   if (self) {
     _name = name ? name : DEFAULT_ENGINE_NAME;
+
+    if ([_name isEqual:DEFAULT_ENGINE_NAME]) {
+      _supportedAttributes = [NSArray arrayWithObjects:ATTR_AGILITY, ATTR_BODY, ATTR_CHARISMA, ATTR_EDGE, ATTR_INTUITION, ATTR_LOGIC, ATTR_REACTION, ATTR_STRENGTH, ATTR_WILLPOWER, nil];
+    }
+
     _context = [[SRAContext alloc] init];
+    _characterRegistry = [[SRACharacterRegistry alloc] initWithEngine:self];
+    _characteristicRegistry = [[SRACharacteristicInfoRegistry alloc] initWithEngine:self];
   }
 
   return self;
 }
 
 - (BOOL)isEqual:(id)object {
-  if ([object isKindOfClass:[SRAEngine class]])
-  {
+  if ([object isKindOfClass:[SRAEngine class]]) {
     return [_name isEqual:[object name]];
   }
 
@@ -43,31 +51,31 @@ NSString const *DEFAULT_ENGINE_NAME = @"SR4";
 }
 
 
-- (int) throwDie {
-  return 1 + random()%6;
+- (int)throwDie {
+  return 1 + random() % 6;
 }
 
-- (NSArray *) throwDice: (int) diceNumber {
+- (NSArray *)throwDice:(int)diceNumber {
   NSMutableArray *results = [NSMutableArray arrayWithCapacity:diceNumber];
   for (int index = 0; index < diceNumber; index++) {
     [results addObject:[NSNumber numberWithInt:[self throwDie]]];
   }
-  
+
   return results;
 }
 
 - (SRATestResult *)testCharacter:(SRACharacter *)character forTest:(SRATest *)test {
   int dicePool = [test dicePoolFor:character];
-  NSArray *diceResults = [self throwDice: dicePool];
-  SRATestResult *result = [[SRATestResult alloc] initWithDiceResults: diceResults];
-  return result; 
+  NSArray *diceResults = [self throwDice:dicePool];
+  SRATestResult *result = [[SRATestResult alloc] initWithDiceResults:diceResults];
+  return result;
 }
 
 - (SRATestResult *)testCharacter:(SRACharacter *)character forTest:(SRATest *)test withEdge:(BOOL)useEdge {
   return nil;
 }
 
-+ (SRAEngine *) engineNamed: (NSString *)engineName {
++ (SRAEngine *)engineNamed:(NSString const *)engineName {
   NSDate *now = [[NSDate alloc] init];
   srandom([now timeIntervalSince1970]);
   return [[SRAEngine alloc] initWith:engineName];
@@ -75,7 +83,7 @@ NSString const *DEFAULT_ENGINE_NAME = @"SR4";
 
 
 + (SRAEngine *)defaultEngine {
- return [self engineNamed:DEFAULT_ENGINE_NAME];
+  return [self engineNamed:DEFAULT_ENGINE_NAME];
 
 }
 @end

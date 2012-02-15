@@ -8,6 +8,7 @@
 #import "SRACharacteristic.h"
 #import "SRACharacteristicType.h"
 #import "SRACharacteristicInfo.h"
+#import "SRACharacteristicInfoRegistry.h"
 
 
 @implementation SRACharacteristic {
@@ -17,12 +18,8 @@
 @synthesize info = _info;
 
 
-+ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value {
-  SRACharacteristicInfo *info = [SRACharacteristicInfo characteristicInfoNamed:name typed:type];
-  if (info) {
-    return [[SRACharacteristic alloc] initWith:info withValue:value];
-  }
-  return nil;
++ (SRACharacteristic *)characteristic:(SRACharacteristicInfo *)characteristicInfo withValue:(int)value {
+  return [[SRACharacteristic alloc] initWith:characteristicInfo withValue:value];
 
 }
 

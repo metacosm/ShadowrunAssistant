@@ -11,6 +11,7 @@
 #import "SRASkillInfo.h"
 #import "SRAAttributeInfo.h"
 #import "SRAContext.h"
+#import "SRAEngine.h"
 
 
 @interface SRATest ()

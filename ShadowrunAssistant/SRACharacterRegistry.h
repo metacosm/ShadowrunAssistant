@@ -8,8 +8,14 @@
 #import <Foundation/Foundation.h>
 
 @class SRACharacter;
+@class SRAEngine;
 
 
 @interface SRACharacterRegistry : NSObject
-+ (SRACharacter *)characterNamed:(NSString const *)name;
+
+@property(readonly, weak) SRAEngine *engine;
+
+- (SRACharacterRegistry *)initWithEngine:(SRAEngine *)engine;
+
+- (SRACharacter *)characterNamed:(NSString const *)name;
 @end

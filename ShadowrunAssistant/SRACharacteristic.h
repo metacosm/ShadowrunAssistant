@@ -19,7 +19,7 @@
 @property(readonly) NSString *name;
 @property(readonly, weak) SRACharacteristicType *type;
 
-+ (SRACharacteristic *)characteristicNamed:(NSString *)name ofType:(SRACharacteristicType *)type withValue:(int)value;
++ (SRACharacteristic *)characteristic:(SRACharacteristicInfo *)characteristicInfo withValue:(int)value;
 
 - (id)initWith:(SRACharacteristicInfo *)info withValue:(int)value;
 @end

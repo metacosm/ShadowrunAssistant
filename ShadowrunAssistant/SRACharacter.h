@@ -1,17 +1,9 @@
 @class SRACharacteristicInfo;
 @class SRACharacteristic;
+@class SRACharacteristicType;
+@class SRAEngine;
 
-extern NSString const* DEFAULT_CHARACTER_NAME;
-extern NSString const *ATTR_AGILITY;
-extern NSString const *ATTR_BODY;
-extern NSString const *ATTR_REACTION;
-extern NSString const *ATTR_STRENGTH;
-extern NSString const *ATTR_CHARISMA;
-extern NSString const *ATTR_INTUITION;
-extern NSString const *ATTR_LOGIC;
-extern NSString const *ATTR_WILLPOWER;
-extern NSString const *ATTR_EDGE;
-
+static NSString const *DEFAULT_CHARACTER_NAME = @"Unnamed";
 
 @interface SRACharacter : NSObject {
 }
@@ -21,11 +13,13 @@ extern NSString const *ATTR_EDGE;
 @property(readwrite) int currentKarma;
 @property(readonly) int totalKarma;
 
-- (id)initWithName:(NSString const *)name;
+@property(readonly, weak) SRAEngine *engine;
+
+- (id)initWithName:(NSString const *)name engine:(SRAEngine *)engine;
 
 - (SRACharacteristicInfo *)characteristicInfo:(NSString const *)name;
 
-- (void)addCharacteristic:(SRACharacteristic *)characteristic;
+- (void)setCharacteristic:(NSString const *)name withValue:(int)value;
 
 - (int)modifiedValueForCharacteristic:(NSString const *)string;
 @end
